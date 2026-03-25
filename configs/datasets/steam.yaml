@@ -1,0 +1,5 @@
+data:
+  maxlen: 50
+model:
+  hidden_units: 50
+  num_blocks: 2

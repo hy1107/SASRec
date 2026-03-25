@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=67"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sasrec"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.0",
+    "numpy>=1.24",
+    "omegaconf>=2.3",
+    "tensorboard>=2.13",
+    "tqdm>=4.65",
+]
+
+[project.optional-dependencies]
+logging = ["wandb>=0.15"]
+dev = ["pytest>=7.0", "pytest-cov"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["sasrec*"]

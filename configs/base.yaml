@@ -1,0 +1,31 @@
+data:
+  maxlen: 50
+  min_interactions: 5
+  num_neg_train: 1
+  num_neg_eval: 100
+
+model:
+  hidden_units: 50
+  num_blocks: 2
+  num_heads: 1
+  dropout_rate: 0.5
+
+train:
+  batch_size: 128
+  lr: 0.001
+  beta1: 0.9
+  beta2: 0.98
+  weight_decay: 0.0
+  num_epochs: 200
+  patience: 20
+  seed: 42
+
+eval:
+  k_values: [5, 10, 20]
+  eval_mode: sampled
+
+logging:
+  use_wandb: false
+  wandb_project: "sasrec"
+  log_dir: "runs/"
+  checkpoint_dir: "checkpoints/"

@@ -1,0 +1,4 @@
+data:
+  maxlen: 50
+model:
+  dropout_rate: 0.5
